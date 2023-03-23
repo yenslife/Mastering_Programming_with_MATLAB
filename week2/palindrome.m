@@ -8,5 +8,5 @@ function logic = palindrome(str)
         logic = palindrome(str(2:end-1));
     else
         logic = false;
-
+    end
 end
