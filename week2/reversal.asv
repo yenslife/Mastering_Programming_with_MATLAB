@@ -1,0 +1,13 @@
+function reversed = reversal(v)
+
+    % move the first element to last and reverse the rest of the vector
+    if length(v) > 1
+        first = v(1);
+        v(1) = [];
+        v(end+1) = first;
+        reversed = reversal(v(1:end-1));
+        reversed(end + 1) = first;
+    else
+        reversed = v;
+    end
+end
